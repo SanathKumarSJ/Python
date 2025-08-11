@@ -1,0 +1,1845 @@
+dev@Lenovo:~$ cd docker/
+dev@Lenovo:~/docker$ docker pull gvenzl/oracle-xe:21-slim
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+dev@Lenovo:~/docker$ docker pull container-registry.oracle.com/database/enterprise:21.3.0.0
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+dev@Lenovo:~/docker$ sudo nano /etc/wsl.conf
+dev@Lenovo:~/docker$ exit
+logout
+PS C:\Users\fain> wsl --shutdown
+PS C:\Users\fain> wsl
+dev@Lenovo:/mnt/c/Users/fain$ sudo nano /etc/wsl.conf
+[sudo] password for dev:
+dev@Lenovo:/mnt/c/Users/fain$ sudo apt update
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+dev@Lenovo:/mnt/c/Users/fain$ sudo apt install docker.io
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+docker.io is already the newest version (27.5.1-0ubuntu3~24.04.2).
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa
+  libllvm17t64 libxcb-dri2-0
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+dev@Lenovo:/mnt/c/Users/fain$ sudo usermod -aG docker $USER
+dev@Lenovo:/mnt/c/Users/fain$ sudo systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+dev@Lenovo:/mnt/c/Users/fain$ sudo nano /etc/wsl.conf
+dev@Lenovo:/mnt/c/Users/fain$ exit
+logout
+PS C:\Users\fain> wsl --shutdown
+PS C:\Users\fain> wsl
+dev@Lenovo:/mnt/c/Users/fain$ sudo nano /etc/wsl.conf
+[sudo] password for dev:
+sudo: a password is required
+dev@Lenovo:/mnt/c/Users/fain$ sudo apt update
+[sudo] password for dev:
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+dev@Lenovo:/mnt/c/Users/fain$ sudo apt install docker.io
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+docker.io is already the newest version (27.5.1-0ubuntu3~24.04.2).
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa
+  libllvm17t64 libxcb-dri2-0
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+dev@Lenovo:/mnt/c/Users/fain$ sudo usermod -aG docker $USER\
+> ^C
+dev@Lenovo:/mnt/c/Users/fain$ sudo usermod -aG docker $USER\
+> ^C
+dev@Lenovo:/mnt/c/Users/fain$ sudo usermod -aG docker $USER
+dev@Lenovo:/mnt/c/Users/fain$ sudo systemctl start docker
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+dev@Lenovo:/mnt/c/Users/fain$ cat /etc/wsl.conf
+[boot]
+systemd=true
+dev@Lenovo:/mnt/c/Users/fain$ ps -p 1 -o comm=
+init
+dev@Lenovo:/mnt/c/Users/fain$
+dev@Lenovo:/mnt/c/Users/fain$
+dev@Lenovo:/mnt/c/Users/fain$
+dev@Lenovo:/mnt/c/Users/fain$ vim /etc/
+Display all 173 possibilities? (y or n)
+.pwd.lock                          magic.mime
+.resolv.conf.systemd-resolved.bak  manpath.config
+NetworkManager/                    mime.types
+PackageKit/                        mke2fs.conf
+X11/                               modprobe.d/
+adduser.conf                       modules
+alternatives/                      modules-load.d/
+apparmor/                          mtab
+apparmor.d/                        nanorc
+apport/                            netconfig
+apt/                               netplan/
+bash.bashrc                        network/
+bash_completion                    networkd-dispatcher/
+bash_completion.d/                 networks
+bindresvport.blacklist             newt/
+binfmt.d/                          nftables.conf
+byobu/                             nsswitch.conf
+ca-certificates/                   opt/
+ca-certificates.conf               os-release
+cloud/                             pam.conf
+console-setup/                     pam.d/
+credstore/                         passwd
+credstore.encrypted/               passwd-
+cron.d/                            perl/
+cron.daily/                        pm/
+cron.hourly/                       polkit-1/
+cron.monthly/                      profile
+cron.weekly/                       profile.d/
+cron.yearly/                       protocols
+crontab                            python3/
+dbus-1/                            python3.12/
+dconf/                             rc0.d/
+debconf.conf                       rc1.d/
+debian_version                     rc2.d/
+default/                           rc3.d/
+deluser.conf                       rc4.d/
+depmod.d/                          rc5.d/
+dhcp/                              rc6.d/
+dhcpcd.conf                        rcS.d/
+dnsmasq.d/                         resolv.conf
+docker/                            rmt
+dpkg/                              rpc
+e2scrub.conf                       rsyslog.conf
+environment                        rsyslog.d/
+environment.d/                     security/
+ethertypes                         selinux/
+fonts/                             sensors.d/
+fstab                              sensors3.conf
+fuse.conf                          services
+gai.conf                           sgml/
+glvnd/                             shadow
+gnutls/                            shadow-
+gprofng.rc                         shells
+groff/                             skel/
+group                              ssh/
+group-                             ssl/
+gshadow                            subgid
+gshadow-                           subgid-
+gss/                               subuid
+gtk-3.0/                           subuid-
+host.conf                          sudo.conf
+hostname                           sudo_logsrvd.conf
+hosts                              sudoers
+init/                              sudoers.d/
+init.d/                            supercat/
+inputrc                            sysctl.conf
+iproute2/                          sysctl.d/
+issue                              systemd/
+issue.net                          terminfo/
+kernel/                            timezone
+landscape/                         tmpfiles.d/
+ld.so.conf                         ubuntu-advantage/
+ld.so.conf.d/                      ucf.conf
+ldap/                              udev/
+legal                              update-manager/
+libaudit.conf                      update-motd.d/
+locale.alias                       vconsole.conf
+locale.conf                        vim/
+locale.gen                         vtrgb
+localtime                          vulkan/
+logcheck/                          wgetrc
+login.defs                         wsl.conf
+logrotate.conf                     xattr.conf
+logrotate.d/                       xdg/
+lsb-release                        xml/
+machine-id                         zsh_command_not_found
+magic
+dev@Lenovo:/mnt/c/Users/fain$ exit
+logout
+PS C:\Users\fain> wsl --update
+Installing: Windows Subsystem for Linux
+Windows Subsystem for Linux has been installed.
+PS C:\Users\fain> wsl
+dev@Lenovo:/mnt/c/Users/fain$ ps -p 1 -o comm=
+systemd
+dev@Lenovo:/mnt/c/Users/fain$ cd dock
+-bash: cd: dock: No such file or directory
+dev@Lenovo:/mnt/c/Users/fain$ cd dock
+-bash: cd: dock: No such file or directory
+dev@Lenovo:/mnt/c/Users/fain$ cd
+dev@Lenovo:~$ ps -p 1 -o comm=
+systemd
+dev@Lenovo:~$ cd docker/
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$ docker pull gvenzl/oracle-xe:21-slim
+21-slim: Pulling from gvenzl/oracle-xe
+f7b0b443446e: Pull complete
+d3746687fc59: Pull complete
+3820d7bb3a88: Pull complete
+4f8ebc90375b: Pull complete
+bea495abb2fa: Pull complete
+073f36588906: Pull complete
+Digest: sha256:ecdf4302ac3d134e1bac5ef6e0c223c2d0f4d4d2b6d551aa79b2346f1ab8f792
+Status: Downloaded newer image for gvenzl/oracle-xe:21-slim
+docker.io/gvenzl/oracle-xe:21-slim
+dev@Lenovo:~/docker$ docker run -d \
+  --name oracledb \
+  -p 1521:1521 \
+  -e ORACLE_SID=ORCLCDB \
+  -e ORACLE_PDB=ORACLESANATH \
+  -e ORACLE_PWD=sanath \
+  -e ORACLE_ALLOW_REMOTE=true \
+  gvenzl/oracle-xe:21-slim
+7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075
+dev@Lenovo:~/docker$ docker exec -it oracledb bash
+Error response from daemon: container 7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075 is not running
+dev@Lenovo:~/docker$ docker exec -it oracledb bash
+Error response from daemon: container 7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075 is not running
+dev@Lenovo:~/docker$ docker run -d \
+  --name oracledb \
+  -p 1521:1521 \
+  -e ORACLE_SID=ORCLCDB \
+  -e ORACLE_PDB=ORCLPDB1 \
+  -e ORACLE_PWD=MyStrongPass123 \
+  -e ORACLE_ALLOW_REMOTE=true \
+  gvenzl/oracle-xe:21-slim
+docker: Error response from daemon: Conflict. The container name "/oracledb" is already in use by container "7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$ docker run 7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075
+docker: Error response from daemon: No such image: sha256:7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075.
+See 'docker run --help'.
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$ docker exec -it oracledb bash
+Error response from daemon: container 7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075 is not running
+dev@Lenovo:~/docker$ docker ps -a
+CONTAINER ID   IMAGE                      COMMAND                  CREATED              STATUS                          PORTS     NAMES
+7cfb408878e7   gvenzl/oracle-xe:21-slim   "container-entrypoin…"   About a minute ago   Exited (1) About a minute ago             oracledb
+dev@Lenovo:~/docker$ docker logs oracledb
+CONTAINER: starting up...
+Oracle Database SYS and SYSTEM passwords have to be specified at first database startup.
+Please specify a password either via the $ORACLE_PASSWORD variable, e.g. '-e ORACLE_PASSWORD=<password>'
+or set the $ORACLE_RANDOM_PASSWORD environment variable to any value, e.g. '-e ORACLE_RANDOM_PASSWORD=yes'.
+dev@Lenovo:~/docker$ docker run -d \
+  --name oracledb \
+  -p 1521:1521 \
+  -e ORACLE_PASSWORD=MyStrongPass123 \
+  gvenzl/oracle-xe:21-slim
+docker: Error response from daemon: Conflict. The container name "/oracledb" is already in use by container "7cfb408878e73dd3a62a373285333a237ab3abd08ea8421ca12170934404e075". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+dev@Lenovo:~/docker$ docker rm 7cfb408878e73dd3a62a373285333a237ab3abd08ea
+7cfb408878e73dd3a62a373285333a237ab3abd08ea
+dev@Lenovo:~/docker$ docker run -d   --name oracledb   -p 1521:1521   -e ORACLE_PASSWORD=MyStrongPass123   gvenzl/oracle-xe:21-slim
+fd4e0e0517356b8daa84564ebb8fce182545a29facaa934a1bcf7540fb5ba70b
+dev@Lenovo:~/docker$ docker logs oracledb
+CONTAINER: starting up...
+CONTAINER: first database startup, initializing...
+CONTAINER: uncompressing database data files, please wait...
+dev@Lenovo:~/docker$ docker logs oracledb
+CONTAINER: starting up...
+CONTAINER: first database startup, initializing...
+CONTAINER: uncompressing database data files, please wait...
+dev@Lenovo:~/docker$ docker logs -f oracledb
+CONTAINER: starting up...
+CONTAINER: first database startup, initializing...
+CONTAINER: uncompressing database data files, please wait...
+CONTAINER: done uncompressing database data files, duration: 39 seconds.
+CONTAINER: starting up Oracle Database...
+
+LSNRCTL for Linux: Version 21.0.0.0.0 - Production on 11-AUG-2025 18:50:08
+
+Copyright (c) 1991, 2021, Oracle.  All rights reserved.
+
+Starting /opt/oracle/product/21c/dbhomeXE/bin/tnslsnr: please wait...
+
+TNSLSNR for Linux: Version 21.0.0.0.0 - Production
+System parameter file is /opt/oracle/homes/OraDBHome21cXE/network/admin/listener.ora
+Log messages written to /opt/oracle/diag/tnslsnr/fd4e0e051735/listener/alert/log.xml
+Listening on: (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC_FOR_XE)))
+Listening on: (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=0.0.0.0)(PORT=1521)))
+
+Connecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROC_FOR_XE)))
+STATUS of the LISTENER
+------------------------
+Alias                     LISTENER
+Version                   TNSLSNR for Linux: Version 21.0.0.0.0 - Production
+Start Date                11-AUG-2025 18:50:09
+Uptime                    0 days 0 hr. 0 min. 1 sec
+Trace Level               off
+Security                  ON: Local OS Authentication
+SNMP                      OFF
+Default Service           XE
+Listener Parameter File   /opt/oracle/homes/OraDBHome21cXE/network/admin/listener.ora
+Listener Log File         /opt/oracle/diag/tnslsnr/fd4e0e051735/listener/alert/log.xml
+Listening Endpoints Summary...
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC_FOR_XE)))
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=0.0.0.0)(PORT=1521)))
+The listener supports no services
+The command completed successfully
+ORACLE instance started.
+
+Total System Global Area 1610612120 bytes
+Fixed Size                  9686424 bytes
+Variable Size             637534208 bytes
+Database Buffers          956301312 bytes
+Redo Buffers                7090176 bytes
+Database mounted.
+Database opened.
+
+CONTAINER: Resetting SYS and SYSTEM passwords.
+
+User altered.
+
+
+User altered.
+
+
+#########################
+DATABASE IS READY TO USE!
+#########################
+
+################################################
+NOTICE: YOU ARE USING AN OLD IMAGE VERSION!
+PLEASE CONSIDER UPGRADING TO gvenzl/oracle-free!
+################################################
+
+##################################################################
+CONTAINER: The following output is now from the alert_XE.log file:
+##################################################################
+2025-08-11T18:50:51.330260+00:00
+Resize operation completed for file# 201, fname /opt/oracle/oradata/XE/temp01.dbf, old size 2048K, new size 12288K
+2025-08-11T18:50:52.693730+00:00
+XEPDB1(3):Started service freepdb1/freepdb1/freepdb1
+XEPDB1(3):Opening pdb with Resource Manager plan: DEFAULT_PLAN
+Pluggable database XEPDB1 opened read write
+Starting background process CJQ0
+Completed: ALTER DATABASE OPEN
+2025-08-11T18:50:53.065728+00:00
+CJQ0 started with pid=58, OS id=218
+
+
+
+^Ccontext canceled
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$
+dev@Lenovo:~/docker$ docker exec -it oracledb bash
+bash-4.4$ sqlplus as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$ ^C
+bash-4.4$ exit
+dev@Lenovo:~/docker$ docker exec -it oracledb
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+dev@Lenovo:~/docker$ docker exec -it oracledb bash
+bash-4.4$ sql
+sqlldr   sqlplus
+bash-4.4$ sqlplus / as sydba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$ exit
+dev@Lenovo:~/docker$ cd
+dev@Lenovo:~$ docker exec -it oracledb bash
+bash-4.4$ sqlplus / as sydba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus / as sydba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$ exit
+dev@Lenovo:~$ docker exec -it oracledb bash
+bash-4.4$ sqlplus /MyStrongPass123 as sydba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus sys/MyStrongPass123@//localhost:1521/ORCLCDB as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:04:34 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+Enter user-name: sqlplus sys/MyStrongPass123@//localhost:1521/ORCLCDB as sysdba^Cdd
+bash-4.4$
+bash-4.4$
+bash-4.4$ sqlplus /MyStrongPass123@//localhost:1521/ORCLCDB as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:04:57 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus @//localhost:1521/ORCLCDB as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:05:04 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+SP2-0310: unable to open file "//localhost:1521/ORCLCDB.sql"
+Enter user-name: bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$ export ORACLE_SID=ORCLCDB
+bash-4.4$ sqlplus / as sydba
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus sys/MyStrongPass123@//localhost:1521/ORCLCDB as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:05:39 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+Enter user-name: bash-4.4$
+bash-4.4$
+bash-4.4$ sqlplus / as sysdba
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:08:26 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Connected to an idle instance.
+
+SQL> show pdbs;
+ERROR:
+ORA-01034: ORACLE not available
+Process ID: 0
+Session ID: 0 Serial number: 0
+
+
+SP2-1545: This feature requires Database availability.
+SQL> ALTER SESSION SET CONTAINER = CDB$ROOT;
+ALTER SESSION SET CONTAINER = CDB$ROOT
+*
+ERROR at line 1:
+ORA-01034: ORACLE not available
+Process ID: 0
+Session ID: 0 Serial number: 0
+
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> clear
+SQL> cls
+SP2-0042: unknown command "cls" - rest of line ignored.
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> clr
+SP2-0042: unknown command "clr" - rest of line ignored.
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>                                  est of line ignored.
+SQL> ^[[C^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[
+SQL> 734: unknown command beginning "
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> select * from dual;
+select * from dual
+*
+ERROR at line 1:
+ORA-01034: ORACLE not available
+Process ID: 0
+Session ID: 0 Serial number: 0
+
+
+SQL>
+SQL>
+SQL>
+SQL> startup;
+ORA-01078: failure in processing system parameters
+LRM-00109: could not open parameter file '/opt/oracle/dbs/initORCLCDB.ora'
+SQL> Disconnected
+bash-4.4$ exit
+dev@Lenovo:~$ docker ps -a
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+fd4e0e051735   gvenzl/oracle-xe:21-slim   "container-entrypoin…"   21 minutes ago   Up 21 minutes   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp   oracledb
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$ docker ps
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+fd4e0e051735   gvenzl/oracle-xe:21-slim   "container-entrypoin…"   21 minutes ago   Up 21 minutes   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp   oracledb
+dev@Lenovo:~$ docker exec -it oracledb bash
+bash-4.4$
+bash-4.4$
+bash-4.4$ sqlplus / as sys;
+
+SQL*Plus: Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Use SQL*Plus to execute SQL, PL/SQL and SQL*Plus statements.
+
+Usage 1: sqlplus -H | -V
+
+    -H             Displays the SQL*Plus version and the
+                   usage help.
+    -V             Displays the SQL*Plus version.
+
+Usage 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+
+  <option> is: [-C <version>] [-F] [-L] [-M "<options>"] [-NOLOGINTIME]
+               [-R <level>] [-S]
+
+    -C <version>   Sets the compatibility of affected commands to the
+                   version specified by <version>.  The version has
+                   the form "x.y[.z]".  For example, -C 10.2.0
+    -F             This option improves performance in general. It changes
+                   the default values settings.
+                   See SQL*Plus User's Guide for the detailed settings.
+    -L             Attempts to log on just once, instead of
+                   reprompting on error.
+    -M "<options>" Sets automatic HTML or CSV markup of output.  The options
+                   have the form:
+                   {HTML html_options|CSV csv_options}
+                   See SQL*Plus User's Guide for detailed HTML and CSV options.
+    -NOLOGINTIME   Don't display Last Successful Login Time.
+    -R <level>     Sets restricted mode to disable SQL*Plus commands
+                   that interact with the file system.  The level can
+                   be 1, 2 or 3.  The most restrictive is -R 3 which
+                   disables all user commands interacting with the
+                   file system.
+    -S             Sets silent mode which suppresses the display of
+                   the SQL*Plus banner, prompts, and echoing of
+                   commands.
+
+  <logon> is: {<username>[/<password>][@<connect_identifier>] | / }
+              [AS {SYSDBA | SYSOPER | SYSASM | SYSBACKUP | SYSDG
+              | SYSKM | SYSRAC}] [EDITION=value]
+
+    Specifies the database account username, password and connect
+    identifier for the database connection.  Without a connect
+    identifier, SQL*Plus connects to the default database.
+
+    The AS SYSDBA, AS SYSOPER, AS SYSASM, AS SYSBACKUP, AS SYSDG,
+    AS SYSKM and AS SYSRAC options are database administration privileges.
+
+    <connect_identifier> can be in the form of Net Service Name
+    or Easy Connect.
+
+      @[<net_service_name> | [[//]Host[:Port]/<service_name>] |
+        [[[protocol:]//]host1{,host12}[:port1]{,host2:port2}[/service_name]
+         [:server][/instance_name][?[parameter_name=value]
+         {&parameter_name=value}]]]
+
+        <net_service_name> is a simple name for a service that resolves
+        to a connect descriptor.
+
+        Example: Connect to database using Net Service Name and the
+                 database net service name is ORCL.
+
+           sqlplus myusername/mypassword@ORCL
+
+        Host specifies the host name or IP address of the database
+        server computer.
+
+        Port specifies the listening port on the database server.
+
+        <service_name> specifies the service name of the database you
+        want to access.
+
+        Example: Connect to database using Easy Connect and the
+                 Service name is ORCL.
+
+           sqlplus myusername/mypassword@Host/ORCL
+
+    The /NOLOG option starts SQL*Plus without connecting to a
+    database.
+
+    The EDITION specifies the value for Session Edition.
+
+
+  <start> is: @<URL>|<filename>[.<ext>] [<parameter> ...]
+
+    Runs the specified SQL*Plus script from a web server (URL) or the
+    local file system (filename.ext) with specified parameters that
+    will be assigned to substitution variables in the script.
+
+When SQL*Plus starts, and after CONNECT commands, the site profile
+(e.g. $ORACLE_HOME/sqlplus/admin/glogin.sql) and the user profile
+(e.g. login.sql in the working directory) are run.  The files may
+contain SQL*Plus commands.
+
+Refer to the SQL*Plus User's Guide and Reference for more information.
+bash-4.4$ sqlplus / as sysdba;
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:11:20 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> select * from dual;
+
+D
+-
+X
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> select * from XEPDB1;
+select * from XEPDB1
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>
+SQL>
+SQL>
+SQL> ;
+  1* select * from XEPDB1
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> alter session set container = CDB$root;
+
+Session altered.
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> show pdbs
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> alter session set container = CDB$root
+  2  ;
+
+Session altered.
+
+SQL>
+SQL>
+SQL>
+SQL> select con_name;
+select con_name
+              *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> alter session set container = CDB$root
+  2
+SQL>
+SQL>
+SQL>
+SQL> alter session set container = CDB$root;
+
+Session altered.
+
+SQL>
+SQL>
+SQL> show pdbsl
+SP2-0158: unknown SHOW option "pdbsl"
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/');
+CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/')
+*
+ERROR at line 1:
+ORA-65005: missing or invalid file name pattern for file -
+/opt/oracle/oradata/XE/pdbseed/system01.dbf
+
+
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/');^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[
+  2
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/');d  2  Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+bash-4.4$ sqlplus system/MyStrongPass123@//localhost:1521/XEPDB1
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:15:13 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Last Successful login time: Mon Sep 30 2024 01:54:37 +00:00
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/');
+CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/')
+*
+ERROR at line 1:
+ORA-65040: operation not allowed from within a pluggable database
+
+
+SQL> alter session set container = CDB$root;
+
+Session altered.
+
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/');
+CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/ORCLCDB/mypdb/')
+*
+ERROR at line 1:
+ORA-65005: missing or invalid file name pattern for file -
+/opt/oracle/oradata/XE/pdbseed/system01.dbf
+
+
+SQL> Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+bash-4.4$ /opt/oracle/oradata/
+XE/       dbconfig/
+bash-4.4$ /opt/oracle/oradata/XE/
+XEPDB1/  pdbseed/
+bash-4.4$ sqlplus system/MyStrongPass123@//localhost:1521/XEPDB1
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:16:46 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Last Successful login time: Mon Aug 11 2025 19:15:13 +00:00
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> alter session set container = CDB$root;
+
+Session altered.
+
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/
+  2
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/','/opt/oracle/oradata/
+  2
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/');
+
+Pluggable database created.
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> show pdbs;
+SP2-0382: The SHOW PDBS command is not available
+SQL>
+SQL>
+SQL>
+SQL> Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+bash-4.4$ sqlplus system/MyStrongPass123@//localhost:1521/CDB$ROOT
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:18:56 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-12514: TNS:listener does not currently know of service requested in connect
+descriptor
+
+
+Enter user-name: d^XEnter password:
+ERROR:
+ORA-01005: null password given; logon denied
+
+
+Enter user-name: bash-4.4$
+bash-4.4$ exit
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$
+dev@Lenovo:~$ docker exec -it oracledb bash
+bash-4.4$ sqlplus / as sysdba;
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:19:13 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/');
+CREATE PLUGGABLE DATABASE mypdb ADMIN USER pdbadmin IDENTIFIED BY pdbpass FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/')
+*
+ERROR at line 1:
+ORA-65012: Pluggable database MYPDB already exists.
+
+
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+         4 MYPDB                          MOUNTED
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/');
+CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/')
+*
+ERROR at line 1:
+ORA-01537: cannot add file '/opt/oracle/oradata/XE/mypdb/system01.dbf' - file
+already part of database
+
+
+SQL> alter session set container = CDBR$root;
+alter session set container = CDBR$root
+                              *
+ERROR at line 1:
+ORA-65000: missing or invalid pluggable database name
+
+
+SQL> CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/')
+  2
+SQL>
+SQL>
+SQL> alter session set container = CDB$root;
+
+Session altered.
+
+SQL>
+SQL>
+SQL>
+SQL> CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/');
+CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/mypdb/')
+*
+ERROR at line 1:
+ORA-01537: cannot add file '/opt/oracle/oradata/XE/mypdb/system01.dbf' - file
+already part of database
+
+
+SQL> CREATE PLUGGABLE DATABASE SANATHPDB ADMIN USER sanboii IDENTIFIED BY sanboii FILE_NAME_CONVERT = ('/opt/oracle/oradata/XE/pdbseed/','/opt/oracle/oradata/XE/sanboii');
+
+Pluggable database created.
+
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+         4 MYPDB                          MOUNTED
+         7 SANATHPDB                      MOUNTED
+SQL>
+SQL>
+SQL> Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+bash-4.4$ sqlplus sanboii/sanboii@@//localhost:1521/SANATHPDB
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:23:14 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+Enter user-name: ^C
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$
+bash-4.4$ sqlplus / as sysdba;
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:23:42 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL>
+SQL>
+SQL> ALTER PLUGGABLE DATABASE SANATHPDB open;
+
+Pluggable database altered.
+
+SQL> ALTER PLUGGABLE DATABASE SANATHPDB SAVE STATE;
+
+Pluggable database altered.
+
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 XEPDB1                         READ WRITE NO
+         4 MYPDB                          MOUNTED
+         7 SANATHPDB                      READ WRITE NO
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> Disconnected from Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+bash-4.4$ sqlplus sanboii/sanboii@//localhost:1521/SANATHPDB
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Aug 11 19:25:44 2025
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
